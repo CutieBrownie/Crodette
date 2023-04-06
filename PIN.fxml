@@ -6,30 +6,30 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PinController">
    <children>
       <Label layoutX="143.0" layoutY="27.0" prefHeight="134.0" prefWidth="314.0" text="Cordett Banking System">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="177.0" layoutY="186.0" prefHeight="58.0" prefWidth="200.0" />
+      <TextField fx:id="_textPin" layoutX="177.0" layoutY="186.0" prefHeight="58.0" prefWidth="200.0" />
       <Label layoutX="120.0" layoutY="189.0" prefHeight="51.0" prefWidth="67.0" text="Pin:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="264.0" layoutY="290.0" mnemonicParsing="false" text="2" />
-      <Button layoutX="420.0" layoutY="202.0" mnemonicParsing="false" text="Enter" />
-      <Button layoutX="181.0" layoutY="290.0" mnemonicParsing="false" text="1" />
-      <Button layoutX="350.0" layoutY="290.0" mnemonicParsing="false" text="3" />
-      <Button layoutX="180.0" layoutY="339.0" mnemonicParsing="false" text="4" />
-      <Button layoutX="264.0" layoutY="339.0" mnemonicParsing="false" text="5" />
-      <Button layoutX="350.0" layoutY="339.0" mnemonicParsing="false" text="6" />
-      <Button layoutX="350.0" layoutY="394.0" mnemonicParsing="false" text="9" />
-      <Button layoutX="264.0" layoutY="394.0" mnemonicParsing="false" text="8" />
-      <Button layoutX="180.0" layoutY="394.0" mnemonicParsing="false" text="7" />
-      <Button layoutX="264.0" layoutY="446.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="0" />
+      <Button fx:id="two" layoutX="264.0" layoutY="290.0" mnemonicParsing="false" text="2" />
+      <Button fx:id="_btnEnter" layoutX="420.0" layoutY="202.0" mnemonicParsing="false" text="Enter" />
+      <Button fx:id="one" layoutX="181.0" layoutY="290.0" mnemonicParsing="false" text="1" />
+      <Button fx:id="three" layoutX="350.0" layoutY="290.0" mnemonicParsing="false" text="3" />
+      <Button fx:id="four" layoutX="180.0" layoutY="339.0" mnemonicParsing="false" text="4" />
+      <Button fx:id="five" layoutX="264.0" layoutY="339.0" mnemonicParsing="false" text="5" />
+      <Button fx:id="six" layoutX="350.0" layoutY="339.0" mnemonicParsing="false" text="6" />
+      <Button fx:id="nine" layoutX="350.0" layoutY="394.0" mnemonicParsing="false" text="9" />
+      <Button fx:id="eight" layoutX="264.0" layoutY="394.0" mnemonicParsing="false" text="8" />
+      <Button fx:id="seven" layoutX="180.0" layoutY="394.0" mnemonicParsing="false" text="7" />
+      <Button fx:id="zero" layoutX="264.0" layoutY="446.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="0" />
       <Label layoutX="197.0" layoutY="120.0" prefHeight="58.0" prefWidth="207.0" text="Please enter 4 digits PIN" />
       <Label layoutX="227.0" layoutY="169.0" />
    </children>
