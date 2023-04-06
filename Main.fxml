@@ -5,29 +5,29 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <children>
-      <Label layoutX="233.0" layoutY="89.0" prefHeight="65.0" prefWidth="135.0" text="Customer's name">
+      <Label fx:id="_txtFieldName" alignment="CENTER" layoutX="189.0" layoutY="89.0" prefHeight="65.0" prefWidth="247.0" text="Customer's name" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="94.0" layoutY="265.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Withdraw/Deposit">
+      <Button fx:id="_btnWithdrawDeposit" layoutX="94.0" layoutY="265.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Withdraw/Deposit">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="94.0" layoutY="187.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Transfer money">
+      <Button fx:id="_btnTransfer" layoutX="94.0" layoutY="187.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Transfer money">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="357.0" layoutY="187.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="View My Account">
+      <Button fx:id="_btnViewAccount" layoutX="357.0" layoutY="187.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="View My Account">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="357.0" layoutY="265.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Logout">
+      <Button fx:id="_btnLogout" layoutX="357.0" layoutY="265.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Logout">
          <font>
             <Font size="14.0" />
          </font>

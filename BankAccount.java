@@ -34,11 +34,11 @@ public class BankAccount {
     }
 
     public void setName(String name){
-        _pin = name;
+        _name = name;
     }
 
     public String getName(){
-        return _pin;
+        return _name;
     }
 
     public void setBalance(double price){

@@ -73,7 +73,6 @@ import java.util.Scanner;
     }
 
     public void saveData() {
-        System.out.println("At save: "+_list);
         // Create 3 separate BankAccount objects (this will become an array list)
         PrintWriter writer = null;
         try {
@@ -95,7 +94,6 @@ import java.util.Scanner;
     }
 
     public void loadData() {
-        System.out.println("At load: "+_list);
         Scanner reader = null;
         try {
             File fileDescriptor = new File("bank_account.txt");
