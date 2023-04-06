@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class LoginController {
+    static Database _list = new Database();
+
     @FXML private Button _btnLogin;
     @FXML private Button _btnCreateAccount;
 
@@ -30,6 +32,7 @@ public class LoginController {
             secondStage.setScene(scene);
             // secondStage.initModality(Modality.APPLICATION_MODAL);  // Use this so you have to close the 2nd window to return to main window
             secondStage.showAndWait();
+            secondStage.close();
         } catch(IOException e) {
             e.printStackTrace();
         }

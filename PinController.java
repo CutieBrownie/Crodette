@@ -12,7 +12,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class PinController {
-	private Database _list = MainController._list;  // A reference to the list of items
+	private Database _list = LoginController._list;  // A reference to the list of items
+    static BankAccount _login; // A reference to the login account 
 
     @FXML private Button _btnEnter;
     @FXML private TextField _textPin;
@@ -94,12 +95,20 @@ public class PinController {
     private boolean accountExist(String pin){
         return _list.lookup(pin) != null;
     }
+
+    public static BankAccount getUser(){
+        return _login;
+    }
+
     private void onEnterClicked() {
         // Open the second window (stage)
         if (!accountExist(_textPin.getText())){
             displayAlert("Account "+ _textPin.getText() +" not exist");
             return;
         }
+        _login = _list.lookup(_textPin.getText()); 
+        Alert alert = new Alert(AlertType.INFORMATION, "Successfully login as "+_login.getName());
+        alert.showAndWait();
         try {
             Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
             Scene scene = new Scene(root);
@@ -107,6 +116,7 @@ public class PinController {
             secondStage.setScene(scene);
             secondStage.initModality(Modality.APPLICATION_MODAL);  // Use this so you have to close the 2nd window to return to main window
             secondStage.showAndWait();
+            secondStage.close();
         } catch(IOException e) {
             e.printStackTrace();
         }
