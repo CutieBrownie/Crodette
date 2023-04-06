@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="197.0" layoutY="34.0" prefHeight="65.0" prefWidth="247.0" text="Cordett Banking System" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="53.0" layoutY="104.0" prefHeight="29.0" prefWidth="97.0" text="Welcome back," textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="150.0" layoutY="94.0" prefHeight="49.0" prefWidth="150.0" text="Customer's Name" />
+      <Label contentDisplay="CENTER" layoutX="53.0" layoutY="161.0" prefHeight="29.0" prefWidth="84.0" text="Account Balance:" textAlignment="CENTER">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="151.0" prefHeight="49.0" prefWidth="150.0" text="\$ 10 000" />
+      <Label contentDisplay="CENTER" layoutX="53.0" layoutY="210.0" prefHeight="29.0" prefWidth="84.0" text="Email:" textAlignment="CENTER">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="200.0" prefHeight="49.0" prefWidth="150.0" text="Tester123@email.com" />
+      <Label contentDisplay="CENTER" layoutX="53.0" layoutY="259.0" prefHeight="29.0" prefWidth="84.0" text="Address:" textAlignment="CENTER">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="249.0" prefHeight="49.0" prefWidth="150.0" text="X6Y2Z9" />
+      <Label contentDisplay="CENTER" layoutX="53.0" layoutY="308.0" prefHeight="29.0" prefWidth="84.0" text="Phone:" textAlignment="CENTER">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="298.0" prefHeight="49.0" prefWidth="150.0" text="1234567890" />
+      <Button layoutX="273.0" layoutY="347.0" mnemonicParsing="false" text="Back" />
+   </children>
+</Pane>
