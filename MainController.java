@@ -14,7 +14,6 @@ import javafx.stage.Stage;
 public class MainController {
     // The list of items, has package (omitted) visibility and is static so we can access it easily from SecondController.
     static BankAccount _login = PinController._login;
-
     @FXML private Label _txtFieldName;
     @FXML private Button _btnTransfer;
     @FXML private Button _btnWithdrawDeposit;
