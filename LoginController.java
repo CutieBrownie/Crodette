@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 public class LoginController {
     static Database _list = new Database();
+    static String _loginPin;
 
     @FXML private Button _btnLogin;
     @FXML private Button _btnCreateAccount;
@@ -18,7 +19,6 @@ public class LoginController {
     @FXML private void initialize() {
         // Attach event handler(s)
         _btnLogin.setOnAction( e -> onLoginClicked() );    // Always call a method in the outer class
-
     }
 
     // Event handlers
@@ -28,11 +28,13 @@ public class LoginController {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("PIN.fxml"));
             Scene scene = new Scene(root);
-            Stage secondStage = new Stage();
-            secondStage.setScene(scene);
+            // Stage secondStage  = new Stage();
+            // secondStage.setScene(scene);
             // secondStage.initModality(Modality.APPLICATION_MODAL);  // Use this so you have to close the 2nd window to return to main window
-            secondStage.showAndWait();
-            secondStage.close();
+            // secondStage.showAndWait();
+            Stage secondStage = (Stage) _btnLogin.getScene().getWindow();
+            secondStage.setScene(scene);
+            secondStage.show();
         } catch(IOException e) {
             e.printStackTrace();
         }

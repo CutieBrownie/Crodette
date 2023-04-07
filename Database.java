@@ -18,9 +18,13 @@ import java.util.Scanner;
     public Database() {
         // generateRandomData();
         loadData(); // Supposingly load to use. Will clear the list and get new from txt file
-        saveData(); // Supposingly save to file
+        // saveData(); // Supposingly save to file
     }
-
+    /**
+     * Lookup account base on PIN
+     * @param pin
+     * @return
+     */
     public BankAccount lookup(String pin){
         for (int i = 0; i < getSize(); i++){
             BankAccount item = _list.get(i);
@@ -31,6 +35,21 @@ import java.util.Scanner;
         return null;
     }
 
+    public BankAccount emailLookup(String email){
+        for (int i = 0; i < getSize(); i++){
+            BankAccount item = _list.get(i);
+            if (item.getEmail().equals(email)){
+                return item;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Lookup the index of item base on the PIN
+     * @param pin
+     * @return
+     */
     private int indexLookup(String pin){
         for (int i = 0; i < getSize(); i++){
             BankAccount item = _list.get(i);
@@ -46,9 +65,38 @@ import java.util.Scanner;
         return _list.size();
     }
 
+    /**
+     * This method will help update an account
+     * @param pin - The PIN of the account
+     * @param email
+     * @param balance
+     * @param address
+     */
     public void updateItem(String name, String email, double balance, String address){
-        BankAccount acc = lookup(name);
-        _list.set(indexLookup(name), new BankAccount(acc.getPin(),email, name, balance, address));
+        BankAccount acc = lookupByName(name);
+        _list.set(indexLookup(acc.getPin()), new BankAccount(acc.getPin(),email, name, balance, address));
+        saveData();
+        loadData();
+    }
+
+    private BankAccount lookupByName(String pin) {
+        for (int i = 0; i < getSize(); i++){
+            BankAccount item = _list.get(i);
+            if (item.getName().equals(pin)){
+                return item;
+            }
+        }
+        return null;
+    }
+    /**
+     * This method will only update the balance of the account
+     * @param pin
+     */
+    public void updateBalance(String name, double amount){
+        BankAccount acc = lookupByName(name);
+        _list.set(indexLookup(acc.getPin()), new BankAccount(acc.getPin(),acc.getEmail(), name, amount, acc.getAddress()));
+        saveData();
+        loadData();
     }
 
     // Get a list item
@@ -113,6 +161,12 @@ import java.util.Scanner;
             if (reader != null) {
                 reader.close();
             }
+        }
+    }
+
+    public void viewDatabase(){
+        for (int i = 0; i < getSize(); i++){
+            System.out.println(_list.get(i));
         }
     }
 }
